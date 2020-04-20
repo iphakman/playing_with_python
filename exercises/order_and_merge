@@ -1,0 +1,41 @@
+"""
+merge 2 arrays and sort
+"""
+
+def manual_sort_array(arr):
+    results = []
+    for k in range(len(arr) - 1, 0, -1):
+        for g in range(k):
+            if arr[g] > arr[g + 1]:
+                arr[g], arr[g + 1] = arr[g + 1], arr[g]
+
+
+def manual_merge_arrays(*args):
+    result = []
+    for k in args:
+        for j in k:
+            result.append(j)
+    return result
+
+
+def sort_array(arr):
+    return arr.sort()
+
+
+def merge_arrays(arr1, arr2):
+    return arr1 + arr2
+
+
+if __name__ == "__main__":
+    ar = [8, 6, 17, 4, 2]
+    ars = [5, 7, 2, 13]
+    manual_sort_array(ar)
+    # to sort arrays befor merge
+    # print(ar)
+    # print(ars)
+    
+    
+    t = manual_merge_arrays(ar, ars)
+    print(t)
+    manual_sort_array(t)
+    print(t)
